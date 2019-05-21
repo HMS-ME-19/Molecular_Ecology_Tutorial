@@ -9,7 +9,9 @@ cd /home/suid
 #Install BWA, enter:
 
 git clone https://github.com/lh3/bwa.git
+
 cd bwa
+
 make
 
 #Confirm that BWA successfully installed, enter:
