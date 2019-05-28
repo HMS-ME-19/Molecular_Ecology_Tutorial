@@ -50,12 +50,21 @@ Note: To use BWA, you need to first index the genome with `bwa index'.
 
 
 #For 5.29.19:
-#Goal is to assess relative proportions of Cladocopium and Durisdinium (formerly Clades "C" and "D" of the genus Symbiodinium)
+#Goal is to assess relative proportions of Cladocopium and Durisdinium (formerly Clades "C" and "D" of the genus Symbiodinium) in corals from 3 different locations that vary in their bleaching resistance and overall symbiont loads
 #Run a quick and dirty mapping against markers traditionally used to distinguish the two (ITS2 locus)
 #Mapping using BWA requires an index, a set of sequences you are mapping to
 #This index is the top 200 hits for "Symbiodinium C ITS2" and "Symbiodinium D ITS2" from NCBI genbank
 #I already ran the indexing and created a set of files starting with "Symbiodinium_For_Class.fa"
 
+#To map 
+#change into directory containing bwa and copy it so that it will run in the folder we are working in:
+
+cd /home/SUID/bwa
+cp bwa /home/SUID/Molecular_Ecology_Tutorial
+
+##Run bash script on the sequence files. These are corals from 3 locations around Palau: Luke's (East side of island), the 20's (Southwestern lagoon) and Ulong (A Forereef site).
+
+bash BWA-Batch.sh 2 *.fq.gz
 
 
 
