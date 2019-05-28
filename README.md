@@ -15,9 +15,11 @@ cd bwa
 make
 
 #Confirm that BWA successfully installed, enter:
+
 ./bwa
 
 #You should see the help screen for bwa after you do this
+
 Program: bwa (alignment via Burrows-Wheeler transformation)
 Version: 0.7.17-r1198-dirty
 Contact: Heng Li <lh3@sanger.ac.uk>
@@ -45,3 +47,24 @@ Note: To use BWA, you need to first index the genome with `bwa index'.
       `aln/samse/sampe'. If you are not sure which to use, try `bwa mem'
       first. Please `man ./bwa.1' for the manual.
 #Next
+
+
+#For 5.29.19:
+#Goal is to assess relative proportions of Cladocopium and Durisdinium (formerly Clades "C" and "D" of the genus Symbiodinium)
+#Run a quick and dirty mapping against markers traditionally used to distinguish the two (ITS2 locus)
+#Mapping using BWA requires an index, a set of sequences you are mapping to
+#This index is the top 200 hits for "Symbiodinium C ITS2" and "Symbiodinium D ITS2" from NCBI genbank
+#I already ran the indexing and created a set of files starting with "Symbiodinium_For_Class.fa"
+
+
+
+
+
+
+
+
+
+
+
+
+
