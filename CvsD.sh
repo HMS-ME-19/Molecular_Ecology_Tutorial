@@ -1,11 +1,14 @@
 #!/bin/bash
-#USAGE: bash CvsD.sh *.no.header
+#USAGE: bash CvsD.sh .no.header
 FQ="${@:1}"
 for i in $FQ; do
     BASE=$( basename $i .no.header )
     echo "${BASE}" >> Base.names
-    grep -c Cladocopium ${BASE}.no.header >> Cladocopium.matches
+    grep Cladocopium ${BASE}.no.header > temp
+    grep -v Durisdinium temp > temp2
+    grep -c Cladocopium temp2 >> Cladocopium.matches
     echo "grep -c Cladocopium ${BASE}.no.header"
-    grep -c Durisdinium ${BASE}.no.header >> Durisdinium.matches
+    grep Durisdinium ${BASE}.no.header > temp3
+    grep -v Cladocopium temp3 > temp4
+    grep -c Durisdinium temp4 >> Durisdinium.matches
 done
-
