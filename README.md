@@ -66,7 +66,8 @@ cp bwa /home/SUID/Molecular_Ecology_Tutorial
 
 bash BWA-Batch.sh 2 *.fq.gz
 
-
+#Now count the number of times a sequence matched Cladocopium vs. Durisdinium:
+bash CvsD.sh *.no.header
 
 
 
