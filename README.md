@@ -72,12 +72,18 @@ bash BWA-Batch.sh 2 *.fq.gz
 bash CvsD.sh *.no.header
 
 ######## For 6.5.19
-Goal: Align our sequences to the mitochondrial genome of Acropora, identify variants, investigate coverage depth and explore phyogeny of the mitochondria locus in our samples.
+#Goal: Align our sequences to the mitochondrial genome of Acropora, identify variants, investigate coverage depth and explore phyogeny of the mitochondria locus in our samples.
 
-First: in the Molecular_Ecology_Tutorial directory enter the following to update with necessary files:
+#First: in the Molecular_Ecology_Tutorial directory enter the following to update with necessary files:
 git pull
 
-
+#Submit a batch script that maps a set of sequences from our samples to the reference genome:
+#First, edit the script to reflect the individual files you want to map (Change 07.008.forward.fq.gz... to your individual of choice)
+#Check the initial SBATCH statements, what are you asking the computer to do?
+#How long do you expect your job to take?
+#How much memory are you requesting?
+#submit the script:
+sbatch BWA-Mito.sh
 
 
 
