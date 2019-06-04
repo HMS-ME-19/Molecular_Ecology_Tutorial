@@ -71,6 +71,12 @@ bash BWA-Batch.sh 2 *.fq.gz
 
 bash CvsD.sh *.no.header
 
+######## For 6.5.19
+Goal: Align our sequences to the mitochondrial genome of Acropora, identify variants, investigate coverage depth and explore phyogeny of the mitochondria locus in our samples.
+
+First: in the Molecular_Ecology_Tutorial directory enter the following to update with necessary files:
+git pull
+
 
 
 
