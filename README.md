@@ -74,17 +74,27 @@ bash CvsD.sh *.no.header
 ######## For 6.5.19
 #Goal: Align our sequences to the mitochondrial genome of Acropora, identify variants, investigate coverage depth and explore phyogeny of the mitochondria locus in our samples.
 
+#In your SUID directory ent
+
 #First: in the Molecular_Ecology_Tutorial directory enter the following to update with necessary files:
 git pull
 
 #Submit a batch script that maps a set of sequences from our samples to the reference genome:
 #First, edit the script to reflect the individual files you want to map (Change 07.008.forward.fq.gz... to your individual of choice)
+#To edit: Use nano:
+
+nano <FILENAME>
+
 #Check the initial SBATCH statements, what are you asking the computer to do?
 #How long do you expect your job to take?
 #How much memory are you requesting?
 #submit the script:
 sbatch BWA-Mito.sh
 
+#Take your final vcf file, download it using scp:
+scp SUID@rice.stanford.edu:/home/SUID/Molecular_Ecology_Tutorial/##.###.var.flt.vcf ./
+
+#We will then analyze the vcf files locally
 
 
 
